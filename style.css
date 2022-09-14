@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121214;
+}
+
+button {
+    cursor: pointer;
+}
+
+i {
+    color: white;
+    width: 10px;
+}
+
+.container {
+    width: 90%;
+    height: 80%;
+    border-radius: 0.5em;
+    background: #202024;
+}
+
+.header {
+    min-height: 4.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 1em;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+}
+
+#new {
+    font-size: 1em;
+    padding: 1%;
+    border-radius: 0.2em;
+    border: none;
+    color: white;
+    background-color: #f1600c;
+    padding-right: 1.5em;
+    align-items: space-between;
+}
+
+#new i {
+    color: white !important;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.table {
+    padding: 10px;
+    width: auto; 
+    height: inherit; 
+    overflow: auto;
+}
+
+.table::-webkit-scrollbar {
+    width: 12px;
+    background-color: whitesmoke; 
+}
+  
+.table::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: darkgray; 
+}
+
+table {
+    width: 100%;
+    border-spacing: 10px;
+    word-break: break-all;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #121214;
+    color: white;
+}
+
+thead tr th {
+    padding: 0.5em;
+    margin-bottom: 50px;
+    font-family: 'Roboto' !important;
+}
+
+thead tr th.action {
+    width: 100px !important;
+}
+
+tbody tr td {
+    text-align: center;
+    padding: 6px;
+    max-width: 60px;
+    color: white;
+    border: 1px solid #000;
+    border-radius: 1em;
+    font-family: 'Roboto' !important;
+}
+
+tbody tr {
+    margin-bottom: 50px;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+  
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #202024;
+    border-radius: 10px;
+    width: 35%;
+
+    color: white;
+}
+  
+.modal label {
+    font-size: 14px;
+    width: 100%;
+}
+  
+.modal input {
+    width: 100%;
+    outline: none;
+    padding: 5px 10px; 
+    width: 100%;
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0.2em;
+    background-color: #121214;
+    color: whitesmoke;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.inputs i {
+    margin-top: 5px;
+}
+  
+.modal button {
+    width: 20%;
+    margin: 10px auto;
+    outline: none;
+    border-radius: 0.2em;
+    padding: 5px 10px; 
+    border: none;
+    background-color: #f1600c;
+    padding: 0.5em;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.active {
+    display: flex;
+}
+  
+.active .modal {
+    animation: modal .4s;
+}
+  
+@keyframes modal {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -60px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
+td button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+  
+td button i {
+    font-size: 25px;
+}
+  
+td button i:first-child {
+    margin-right: 10px;
+}
+
+
+@media (max-width: 700px) {
+    body {
+      font-size: 10px;
+    }
+    
+    h1 {
+      font-size: 15px;
+    }
+  
+    #new {
+      padding: 5px;
+      font-size: 10px;
+      padding-right: 1.5em;
+    }
+  
+    thead tr th.acao {
+      width: auto !important;
+    }
+    
+    td button i {
+      font-size: 20px !important;
+    }
+  
+    td button i:first-child {
+      margin-right: 0;
+    }
+  
+    .modal {
+      width: 90% !important;
+    }
+  
+    .modal label {
+      font-size: 12px! important;
+    }
+
+    .modal button {
+        padding-right: 4.5em !important;
+    }
+
+    .inputs i {
+        margin-top: 8px !important;
+    }
+}
+  

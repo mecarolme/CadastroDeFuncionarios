@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD | JavaScript</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4dd1a9f4a4.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Cadastro de Funcionários</h1>
+            <button id="new" onclick="openModal()">Incluir<i class="fa-solid fa-user-plus"></i></i></button>
+        </div>
+
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Função</th>
+                        <th>Salário</th>
+                        <th class="action">Editar</th>
+                        <th class="action">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="modal-container">
+            <div class="modal">
+                <form action="">
+                    <h2>Adicionar novo Funcionário</h2> <br>
+                    <div class="inputs">
+                        <i class="fa-solid fa-user"></i>
+                        <input id="nome" placeholder="Nome" type="text" required />
+                    </div>
+
+                    <div class="inputs">
+                        <i class="fa-solid fa-gear"></i>
+                        <input id="funcao" placeholder="Função" type="text" required />
+                    </div>
+
+                    <div class="inputs">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <input id="salario" placeholder="Salário" type="number" required />
+                    </div>
+                    <button id="btnSave">Salvar <i class="fa-solid fa-check"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
